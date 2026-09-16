@@ -55,8 +55,8 @@ Reconnaissance is the first phase of any real attack or authorized security test
 whois networkwalks.com
 ```
 
-![WHOIS Output](screenshots/01-whois-1.png)
-![WHOIS Output continued](screenshots/01-whois-2.png)
+![WHOIS Output](01-whois-1.png)
+![WHOIS Output continued](01-whois-2.png)
 
 **Findings:**
 - Registrar: GoDaddy.com, LLC
@@ -76,7 +76,7 @@ whois networkwalks.com
 whatweb networkwalks.com
 ```
 
-![WhatWeb Output](screenshots/02-whatweb.png)
+![WhatWeb Output](02-whatweb.png)
 
 **Findings:**
 - CMS: WordPress 7.1, plugin WP Download Manager 3.3.58
@@ -94,7 +94,7 @@ whatweb networkwalks.com
 nslookup networkwalks.com
 ```
 
-![Nslookup Output](screenshots/03-nslookup.png)
+![Nslookup Output](03-nslookup.png)
 
 **Findings:** Resolved IP — `192.232.216.135` (queried via DNS server 8.8.8.8)
 
@@ -109,7 +109,7 @@ nslookup networkwalks.com
 curl -I https://networkwalks.com
 ```
 
-![Curl Output](screenshots/04-curl.png)
+![Curl Output](04-curl.png)
 
 **Findings:**
 - HTTP/2 200, Server: Apache
@@ -128,7 +128,7 @@ curl -I https://networkwalks.com
 wafw00f networkwalks.com
 ```
 
-![Wafw00f Output](screenshots/05-wafw00f.png)
+![Wafw00f Output](05-wafw00f.png)
 
 **Findings:** WAF detected — **ModSecurity (SpiderLabs)**
 
@@ -143,7 +143,7 @@ wafw00f networkwalks.com
 dnsrecon -d networkwalks.com
 ```
 
-![Dnsrecon Output](screenshots/06-dnsrecon.png)
+![Dnsrecon Output](06-dnsrecon.png)
 
 **Findings:**
 - Mail server: mail.networkwalks.com (192.232.216.135)
@@ -164,7 +164,7 @@ dnsrecon -d networkwalks.com
 nmap -sn 10.0.0.0/24
 ```
 
-![Zenmap Nmap Output](screenshots/07-zenmap-output.png)
+![Zenmap Nmap Output](07-zenmap-output.png)
 
 **Findings:**
 - Subnet scanned: `10.0.0.0/24` (VirtualBox NAT Network)
@@ -176,7 +176,7 @@ nmap -sn 10.0.0.0/24
 
 ## Task 8 — Topology View
 
-![Zenmap Topology](screenshots/08-zenmap-topology.png)
+![Zenmap Topology](08-zenmap-topology.png)
 
 **Findings:** Star topology — localhost at center, connected to 10.0.0.1 (gateway) and 10.0.0.2 (own Kali VM).
 
